@@ -1,0 +1,16 @@
+Inicio del documento
+
+Prueba de números {
+		1234567890;
+		0987654321;
+		1234567890;
+		0987654321;
+}
+
+Prueba de UTF-8 {
+		ĸħŋłßæĸħħŋßłæĸħŋ→ø→łħłĸ¶→øßæħđßĸ“«»«“µnĸđðñÑ;
+}
+Fin de UTF-8
+
+Fin del documento
+
