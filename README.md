@@ -1,2 +1,2 @@
 # MHI
-Motor de Historias Interactivas, hecho en C++ para la feria de ciencias
+Motor de Historias Interactivas, hecho en Lua para la feria de ciencias
