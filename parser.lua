@@ -4,11 +4,11 @@
 -- Por Mateo Crimella (También conocido como Bowuigi)
 -- Registrado bajo la licencia GNU GPLv3
 
-u = require("util") -- Util de util.lua
+u = require("utils") -- Util de util.lua
 
 local parser = {}
 
-function parser.p(t)
+function parser.parse(t)
 	sectionName = ""
 	out = {}
 	indexFromSection = 1
