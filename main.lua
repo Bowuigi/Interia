@@ -59,6 +59,7 @@ function love.load()
 		edit="Editar",
 		cancel="Cancelar",
 	}
+	exitstr="Salir"
 
 	-- Los colores son de 0 a 1
 	-- Y son en formato R,G,B
@@ -77,6 +78,11 @@ function love.load()
 			hovered = {bg={0,0,0,0},fg={1,1,1}},
 			active  = {bg={0,0,0,0},fg={1,1,1}},
 		},
+		exitbuttoncolors = {
+			normal  = {bg={0,0.1,1},fg={1,1,1}},
+			hovered = {bg={0,0.7,0.2},fg={1,1,1}},
+			active  = {bg={0,0.3,1},fg={1,1,1}},
+		}
 	}
 
 	if love.filesystem.getInfo("/config/conf.lua")~=nil then
@@ -110,7 +116,7 @@ function love.update(dt)
 	S.layout:reset(scrollX,scrollY,10,10)
 	S.layout:row(math.huge,fontsize)
 
-	if mode==1 or mode==3 then
+	if mode==1 then
 
 		S.Label("Interia",{align = "left",font=titlefont,color=theme.textcolors}, center(S.layout:row()))
 		S.Label(string.format(storiesdirstr,storiesdir),{align = "left",font=defaultfont,color=theme.textcolors}, center(S.layout:row()))
@@ -146,6 +152,13 @@ function love.update(dt)
 		maxscrollY=-#stories*fontsize
 
 	elseif mode==2 then
+		-- Dibujar el botón de salir
+		if S.Button(" "..exitstr.." ",{cornerRadius=10,align="left",font=defaultfont,color=theme.exitbuttoncolors},10,10).hit then
+			scrollX=0
+			scrollY=0
+			hitted=nil
+			mode=1
+		end
 
 		-- Dibujar las secciones requeridas
 		for i,v in ipairs(Parsedt[section].content) do -- Separar el contenido del texto
@@ -173,7 +186,6 @@ function love.update(dt)
 		end
 		-- Calcular el máximo que se puede ir hacia abajo
 		maxscrollY=-#Parsedt[section].content*fontsize
-
 	end
 end
 
