@@ -60,6 +60,7 @@ function love.load()
 		cancel="Cancelar",
 	}
 	exitstr="Salir"
+	folderstr="Abrir la carpeta de historias"
 
 	-- Los colores son de 0 a 1
 	-- Y son en formato R,G,B
@@ -120,6 +121,11 @@ function love.update(dt)
 
 		S.Label("Interia",{align = "left",font=titlefont,color=theme.textcolors}, center(S.layout:row()))
 		S.Label(string.format(storiesdirstr,storiesdir),{align = "left",font=defaultfont,color=theme.textcolors}, center(S.layout:row()))
+		if S.Button(folderstr,{align="left",font=defaultfont,color=theme.buttoncolors},center(S.layout:row())).hit then
+			love.filesystem.createDirectory("stories")
+			love.filesystem.createDirectory("config")
+			love.system.openURL("file://"..storiesdir)
+		end
 		if hitted==nil then
 			S.Label(storyselstr.nosel,{align = "left",font=defaultfont,color=theme.textcolors}, center(S.layout:row()))
 		else
@@ -204,7 +210,7 @@ function love.wheelmoved(x,y)
 	scrollY=scrollY+y*scrollspeed
 end
 
-function love.resized(w,h)
+function love.resize(w,h)
 	width=w
 	height=h
 end
