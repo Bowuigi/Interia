@@ -1,5 +1,6 @@
 #+TITLE: Interia
 #+LANGUAGE: es
+#+OPTIONS: author:nil date:nil timestamp:nil
 
 Motor de Historias Interactivas, hecho en Lua y Love2D para la feria de ciencias INNOVA 2021
 
