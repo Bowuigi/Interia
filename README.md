@@ -261,56 +261,57 @@ Específicamente en el archivo **conf.lua** de la misma carpeta.
 
 ## Por defecto
 
-    -- Configuración de Interia, el motor de historias interactivas
-    keys= {
-    	--   Normales | Vi
-    	up=   {"up",   "k"},
-    	down= {"down", "j"},
-    	left= {"left", "h"},
-    	right={"right","l"},
-    }
-    scrollspeed=15
-    
-    -- Traducción
-    nostoriesstr="No hay ninguna historia en %s\nAgrega una para que aparezca aquí!" -- Necesita %s en donde iría la carpeta
-    storiesdirstr="Las historias van en %s" -- Necesita %s en donde iría la carpeta
-    storyselstr={
-    	sel="Elegiste:",
-    	nosel="Elige tu historia:",
-    }
-    menustr={
-    	read="Leer",
-    	edit="Editar",
-    	cancel="Cancelar",
-    }
-    
-    exitstr="Salir"
-    folderstr="Abrir la carpeta de historias"
-    
-    -- Los colores son de 0 a 1
-    -- Y son en formato R,G,B
-    theme= {
-    	background = {
-    		0,0,0
-    	},
-    	panelcolors = {
-    		0.2,0.2,0.2
-    	},
-    	textcolors = {
-    		normal = {bg={0,0,0},fg={1,1,1}}
-    	},
-    	buttoncolors = {
-    		normal  = {bg={0,0,0,0},fg={0,0.3,1}},
-    		hovered = {bg={0,0,0,0},fg={1,1,1}},
-    		active  = {bg={0,0,0,0},fg={1,1,1}},
-    	},
-    	exitbuttoncolors = {
-    			normal  = {bg={0,0.1,1},fg={1,1,1}},
-    			hovered = {bg={0,0.7,0.2},fg={1,1,1}},
-    			active  = {bg={0,0.3,1},fg={1,1,1}},
-    	}
-    }
+```lua
+-- Configuración de Interia, el motor de historias interactivas
+keys= {
+	--   Normales | Vi
+	up=   {"up",   "k"},
+	down= {"down", "j"},
+	left= {"left", "h"},
+	right={"right","l"},
+}
+scrollspeed=15
 
+-- Traducción
+nostoriesstr="No hay ninguna historia en %s\nAgrega una para que aparezca aquí!" -- Necesita %s en donde iría la carpeta
+storiesdirstr="Las historias van en %s" -- Necesita %s en donde iría la carpeta
+storyselstr={
+	sel="Elegiste:",
+	nosel="Elige tu historia:",
+}
+menustr={
+	read="Leer",
+	edit="Editar",
+	cancel="Cancelar",
+}
+
+exitstr="Salir"
+folderstr="Abrir la carpeta de historias"
+
+-- Los colores son de 0 a 1
+-- Y son en formato R,G,B
+theme= {
+	background = {
+		0,0,0
+},
+	panelcolors = {
+		0.2,0.2,0.2
+	},
+	textcolors = {
+		normal = {bg={0,0,0},fg={1,1,1}}
+	},
+	buttoncolors = {
+		normal  = {bg={0,0,0,0},fg={0,0.3,1}},
+		hovered = {bg={0,0,0,0},fg={1,1,1}},
+		active  = {bg={0,0,0,0},fg={1,1,1}},
+	},
+	exitbuttoncolors = {
+			normal  = {bg={0,0.1,1},fg={1,1,1}},
+			hovered = {bg={0,0.7,0.2},fg={1,1,1}},
+			active  = {bg={0,0.3,1},fg={1,1,1}},
+	}
+}
+```
 
 <a id="orgaf5e2eb"></a>
 
@@ -321,14 +322,16 @@ Específicamente en el archivo **conf.lua** de la misma carpeta.
 
 ### Teclas
 
-    keys= {
-    	--   Normales | Vi
-    	up=   {"up",   "k"},
-    	down= {"down", "j"},
-    	left= {"left", "h"},
-    	right={"right","l"},
-    }
-    scrollspeed=15
+```lua
+keys= {
+	--   Normales | Vi
+	up=   {"up",   "k"},
+	down= {"down", "j"},
+	left= {"left", "h"},
+	right={"right","l"},
+}
+scrollspeed=15
+```
 
 Acá se cambian cuales teclas de el teclado se usan para hacer distintas cosas, además de la velocidad a la que se mueve la pantalla.
 
@@ -384,14 +387,16 @@ La lista **keys** contiene todas las acciones que se pueden realizar en el tecla
 
 Se pueden añadir más opciones cambiando la parte por defecto por algo como lo siguiente:
 
-    keys= {
-    	--   Normales | Vi | Extras recien añadidas
-    	up=   {"up",   "k", "w"},
-    	down= {"down", "j", "s"},
-    	left= {"left", "h", "a"},
-    	right={"right","l", "d"},
-    }
-    scrollspeed=15
+```lua
+keys= {
+	--   Normales | Vi | Extras recien añadidas
+	up=   {"up",   "k", "w"},
+	down= {"down", "j", "s"},
+	left= {"left", "h", "a"},
+	right={"right","l", "d"},
+}
+scrollspeed=15
+```
 
 `scrollspeed` es una variable que define la velocidad a la que se mueve la pantalla, es **15** por defecto.
 
@@ -400,68 +405,73 @@ Se pueden añadir más opciones cambiando la parte por defecto por algo como lo 
 
 ### Traducción
 
-    -- Traducción
-    nostoriesstr="No hay ninguna historia en %s\nAgrega una para que aparezca aquí!" -- Necesita %s en donde iría la carpeta
-    storiesdirstr="Las historias van en %s" -- Necesita %s en donde iría la carpeta
-    storyselstr={
-    	sel="Elegiste:",
-    	nosel="Elige tu historia:",
-    }
-    menustr={
-    	read="Leer",
-    	edit="Editar",
-    	cancel="Cancelar",
-    }
-    
-    exitstr="Salir"
-    folderstr="Abrir la carpeta de historias"
+```lua
+-- Traducción
+nostoriesstr="No hay ninguna historia en %s\nAgrega una para que aparezca aquí!" -- Necesita %s en donde iría la carpeta
+storiesdirstr="Las historias van en %s" -- Necesita %s en donde iría la carpeta
+storyselstr={
+	sel="Elegiste:",
+	nosel="Elige tu historia:",
+}
+menustr={
+	read="Leer",
+	edit="Editar",
+	cancel="Cancelar",
+}
+
+exitstr="Salir"
+folderstr="Abrir la carpeta de historias"
+```
 
 Esta sección corresponde al texto que contiene Interia, se puede cambiar simplemente reemplazando el texto que está entre comillas, aquí un ejemplo, conteniendo una traducción en inglés:
 
-    -- Traducción
-    nostoriesstr="There is no stories in %s\nAdd one so it can appear here!" -- Necesita %s en donde iría la carpeta
-    storiesdirstr="Stories go in %s" -- Necesita %s en donde iría la carpeta
-    storyselstr={
-    	sel="You chose:",
-    	nosel="Select a story:",
-    }
-    menustr={
-    	read="Read",
-    	edit="Edit",
-    	cancel="Cancel",
-    }
-    
-    exitstr="Exit"
-    folderstr="Open the stories folder"
+```lua
+-- Traducción
+nostoriesstr="There is no stories in %s\nAdd one so it can appear here!" -- Necesita %s en donde iría la carpeta
+storiesdirstr="Stories go in %s" -- Necesita %s en donde iría la carpeta
+storyselstr={
+	sel="You chose:",
+	nosel="Select a story:",
+}
+menustr={
+	read="Read",
+	edit="Edit",
+	cancel="Cancel",
+}
 
+exitstr="Exit"
+folderstr="Open the stories folder"
+```
 
 <a id="org4721028"></a>
 
 ### Tema (colores)
 
-    -- Los colores son de 0 a 1
-    -- Y son en formato R,G,B
-    theme= {
-    	background = {
-    		0,0,0
-    	},
-    	panelcolors = {
-    		0.2,0.2,0.2
-    	},
-    	textcolors = {
-    		normal = {bg={0,0,0},fg={1,1,1}}
-    	},
-    	buttoncolors = {
-    		normal  = {bg={0,0,0,0},fg={0,0.3,1}},
-    		hovered = {bg={0,0,0,0},fg={1,1,1}},
-    		active  = {bg={0,0,0,0},fg={1,1,1}},
-    	},
-    	exitbuttoncolors = {
-    			normal  = {bg={0,0.1,1},fg={1,1,1}},
-    			hovered = {bg={0,0.7,0.2},fg={1,1,1}},
-    			active  = {bg={0,0.3,1},fg={1,1,1}},
-    	}
-    }
+```lua
+-- Los colores son de 0 a 1
+-- Y son en formato R,G,B
+theme= {
+	background = {
+		0,0,0
+	},
+	panelcolors = {
+		0.2,0.2,0.2
+	},
+	textcolors = {
+		normal = {bg={0,0,0},fg={1,1,1}}
+	},
+	buttoncolors = {
+		normal  = {bg={0,0,0,0},fg={0,0.3,1}},
+		hovered = {bg={0,0,0,0},fg={1,1,1}},
+		active  = {bg={0,0,0,0},fg={1,1,1}},
+	},
+	exitbuttoncolors = {
+			normal  = {bg={0,0.1,1},fg={1,1,1}},
+			hovered = {bg={0,0.7,0.2},fg={1,1,1}},
+			active  = {bg={0,0.3,1},fg={1,1,1}},
+	}
+}
+```
 
 <table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
 
