@@ -120,12 +120,12 @@ Cambiar la [configuración](#orgcba8f82) a gusto.
 Son un archivo de texto plano (no son documentos de Word ni PDF), generalmente tienen las extensiones **.his** o **.txt** y pueden ser creadas y editadas por distintos editores de texto, como:
 
 -   Linux
-    -   El por defecto de su entorno de escritorio (generalmente llamado &laquo;editor de texto&raquo;)
+    -   El por defecto de su entorno de escritorio (generalmente llamado "editor de texto")
     -   Cualquier editor de terminal (nvim, micro, nano, ne, etc.)
 -   Windows
     -   Block de notas
 -   MacOS
-    -   TextEdit (En la pestaña &laquo;Formato&raquo;, seleccione &laquo;Crear texto sin formato&raquo;)
+    -   TextEdit (En la pestaña "Formato", seleccione "Crear texto sin formato")
     -   Cualquier editor de terminal (nvim, nano, ne, micro, etc.)
 
 Cuando se selecciona **editar** en una historia dentro de Interia, se abre el mismo archivo en el editor de texto predeterminado.
@@ -170,7 +170,7 @@ Cada sección puede o no tener contenido. Como se agrega el contenido está expl
     	La cantidad de contenido que puede tener una sección no tiene límites, además de la memoria y el tamaño del texto
     	Se puede mover hacia ambos lados para ver el texto completo si la línea es muy larga
 
-Esto crea una sección llamada **nombre<sub>de</sub><sub>seccion</sub>** que en Interia se ve de la siguiente manera:
+Esto crea una sección llamada **nombre de seccion** que en Interia se ve de la siguiente manera:
 
     Este texto es parte del contenido
     La cantidad de contenido que puede tener una sección no tiene límites, además de la memoria y el tamaño del texto
@@ -215,7 +215,7 @@ Si se prueba esto desde la aplicación, se ve solo el contenido del primer capí
 
 Si se le da click, te lleva a la sección con el nombre luego del **@**, en este caso `capitulo_2`, mostrando el contenido de ese capítulo.
 
-Si en lugar de el nombre de una sección se utiliza un hipervínculo, como &laquo;<https://gnu.org>&raquo;, abrirá el navegador para mostrar la página correspondiente.
+Si en lugar de el nombre de una sección se utiliza un hipervínculo, como "<https://gnu.org>", abrirá el navegador para mostrar la página correspondiente.
 
 Esto permite que Interia se pueda extender con páginas que permitan usar imágenes, videos, presentaciones y otros.
 
@@ -359,28 +359,28 @@ La lista **keys** contiene todas las acciones que se pueden realizar en el tecla
 <tr>
 <td class="org-left">up</td>
 <td class="org-left">Moverse hacia arriba</td>
-<td class="org-left">{&laquo;up&raquo;,    &laquo;k&raquo;}</td>
+<td class="org-left">{"up",    "k"}</td>
 </tr>
 
 
 <tr>
 <td class="org-left">down</td>
 <td class="org-left">Moverse hacia abajo</td>
-<td class="org-left">{&laquo;down&raquo;,  &laquo;j&raquo;}</td>
+<td class="org-left">{"down",  "j"}</td>
 </tr>
 
 
 <tr>
 <td class="org-left">left</td>
 <td class="org-left">Moverse hacia la izquierda</td>
-<td class="org-left">{&laquo;left&raquo;,  &laquo;h&raquo;}</td>
+<td class="org-left">{"left",  "h"}</td>
 </tr>
 
 
 <tr>
 <td class="org-left">right</td>
 <td class="org-left">Moverse hacia la derecha</td>
-<td class="org-left">{&laquo;right&raquo;, &laquo;l&raquo;}</td>
+<td class="org-left">{"right", "l"}</td>
 </tr>
 </tbody>
 </table>
