@@ -114,7 +114,7 @@ function love.update(dt)
 	scrollY=clamp(maxscrollY,scrollY,0)
 
 	-- Reiniciar la UI
-	S.layout:reset(scrollX,scrollY,10,10)
+	S.layout:reset(scrollX+10,scrollY,10,10)
 	S.layout:row(math.huge,fontsize)
 
 	if mode==1 then
@@ -159,7 +159,7 @@ function love.update(dt)
 
 	elseif mode==2 then
 		-- Dibujar el botón de salir
-		if S.Button(" "..exitstr.." ",{cornerRadius=10,align="left",font=defaultfont,color=theme.exitbuttoncolors},10,10).hit then
+		if S.Button(" "..exitstr.." ",{cornerRadius=10,align="left",font=defaultfont,color=theme.exitbuttoncolors},width-60,height-30).hit then
 			scrollX=0
 			scrollY=0
 			hitted=nil
